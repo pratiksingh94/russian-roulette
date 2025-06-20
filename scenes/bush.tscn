@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://fku5vaeh6qte"]
+
+[ext_resource type="Texture2D" uid="uid://bl3g5tch5k2hd" path="res://assets/enviorment-tiles/Texture/Extra/TX Plant with Shadow.png" id="1_lad4k"]
+
+[node name="Bush" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_lad4k")
+offset = Vector2(0, -7)
+region_enabled = true
+region_rect = Rect2(214.137, 183.54, 52.231, 47.8784)

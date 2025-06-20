@@ -1,0 +1,295 @@
+[gd_scene load_steps=26 format=3 uid="uid://vu0wu21bfvee"]
+
+[ext_resource type="Script" uid="uid://x2an5hlod346" path="res://scenes/scripts/intro.gd" id="1_t1qkj"]
+[ext_resource type="Texture2D" uid="uid://cf4wypmkfm5p4" path="res://assets/paper.jpg" id="1_yjqpq"]
+[ext_resource type="FontFile" uid="uid://dr8b0qwfhpd2x" path="res://assets/fonts/KnightWarrior-w16n8.otf" id="2_4bx60"]
+[ext_resource type="FontFile" uid="uid://dx8jn8551otpr" path="res://assets/fonts/Sportacus-q2qR5.ttf" id="3_bu1yb"]
+[ext_resource type="Texture2D" uid="uid://dsfparsiyvj5q" path="res://assets/keys/W-Key.png" id="4_t1qkj"]
+[ext_resource type="Texture2D" uid="uid://did1u53y02cn2" path="res://assets/keys/S-Key.png" id="5_272cy"]
+[ext_resource type="Texture2D" uid="uid://g7t7puy4cjj1" path="res://assets/keys/A-Key.png" id="6_37iue"]
+[ext_resource type="Texture2D" uid="uid://b7br4tmct0lus" path="res://assets/keys/D-Key.png" id="7_n6p8m"]
+[ext_resource type="Texture2D" uid="uid://dtqjsx8g8rybo" path="res://assets/keys/Space-Key.png" id="8_m3r7s"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i2l1n"]
+texture = ExtResource("1_yjqpq")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xwriy"]
+atlas = ExtResource("4_t1qkj")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u5myo"]
+atlas = ExtResource("4_t1qkj")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u05oh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xwriy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u5myo")
+}],
+"loop": false,
+"name": &"w",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epycs"]
+atlas = ExtResource("5_272cy")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ge50m"]
+atlas = ExtResource("5_272cy")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_17bgi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epycs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ge50m")
+}],
+"loop": false,
+"name": &"s",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dryi7"]
+atlas = ExtResource("6_37iue")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5pmge"]
+atlas = ExtResource("6_37iue")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hai50"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dryi7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5pmge")
+}],
+"loop": false,
+"name": &"a",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kh17o"]
+atlas = ExtResource("7_n6p8m")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_urird"]
+atlas = ExtResource("7_n6p8m")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t5vr6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kh17o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_urird")
+}],
+"loop": false,
+"name": &"d",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4vp3x"]
+atlas = ExtResource("8_m3r7s")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sg54v"]
+atlas = ExtResource("8_m3r7s")
+region = Rect2(64, 0, 64, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yj5im"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4vp3x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sg54v")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Intro" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_t1qkj")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_i2l1n")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -260.0
+offset_top = 29.0
+offset_right = 260.0
+offset_bottom = 153.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="title" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.160784, 0.113725, 0.0666667, 1)
+theme_override_fonts/font = ExtResource("2_4bx60")
+theme_override_font_sizes/font_size = 76
+text = "Russian Roulette"
+horizontal_alignment = 1
+
+[node name="made_by" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.160784, 0.113725, 0.0666667, 1)
+theme_override_fonts/font = ExtResource("2_4bx60")
+theme_override_font_sizes/font_size = 28
+text = "Made by @pratiksingh94 (GitHub)"
+horizontal_alignment = 1
+
+[node name="desc" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.171007
+anchor_top = 0.306327
+anchor_right = 0.828993
+anchor_bottom = 0.560957
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.160784, 0.113725, 0.0666667, 1)
+theme_override_fonts/font = ExtResource("3_bu1yb")
+theme_override_font_sizes/font_size = 35
+text = "You know the rules, if you dont just google it.
+
+Either play the game in the house or 
+explore the surroundings (for some hidden stuff ^_^)"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0520833
+anchor_top = 0.703704
+anchor_right = 0.947917
+anchor_bottom = 0.924383
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+
+[node name="Node" type="Control" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.05
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="HBoxContainer/VBoxContainer/Node"]
+position = Vector2(109, 17)
+scale = Vector2(1.42188, 1.59375)
+sprite_frames = SubResource("SpriteFrames_u05oh")
+animation = &"w"
+frame = 1
+frame_progress = 1.0
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="HBoxContainer/VBoxContainer/Node"]
+position = Vector2(133, 69)
+scale = Vector2(1.42188, 1.59375)
+sprite_frames = SubResource("SpriteFrames_17bgi")
+animation = &"s"
+frame = 1
+frame_progress = 1.0
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="HBoxContainer/VBoxContainer/Node"]
+position = Vector2(78, 70)
+scale = Vector2(1.42188, 1.59375)
+sprite_frames = SubResource("SpriteFrames_hai50")
+animation = &"a"
+frame = 1
+frame_progress = 1.0
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="HBoxContainer/VBoxContainer/Node"]
+position = Vector2(190, 69)
+scale = Vector2(1.42188, 1.59375)
+sprite_frames = SubResource("SpriteFrames_t5vr6")
+animation = &"d"
+frame = 1
+frame_progress = 1.0
+
+[node name="controls" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_colors/font_color = Color(0.160784, 0.113725, 0.0666667, 1)
+theme_override_fonts/font = ExtResource("3_bu1yb")
+theme_override_font_sizes/font_size = 37
+text = "Movement Controls"
+horizontal_alignment = 1
+
+[node name="bugs" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+size_flags_stretch_ratio = 2.75
+theme_override_colors/font_color = Color(0.160784, 0.113725, 0.0666667, 1)
+theme_override_fonts/font = ExtResource("3_bu1yb")
+theme_override_font_sizes/font_size = 28
+text = "This is my first game,
+so if you see any bugs and stuff
+contact me on discord @notpratik"
+horizontal_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+alignment = 1
+
+[node name="Node" type="Control" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.03
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="HBoxContainer/VBoxContainer2/Node"]
+position = Vector2(62, 66)
+scale = Vector2(1.42188, 1.59375)
+sprite_frames = SubResource("SpriteFrames_yj5im")
+autoplay = "default"
+frame_progress = 0.786058
+
+[node name="controls" type="Label" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_colors/font_color = Color(0.160784, 0.113725, 0.0666667, 1)
+theme_override_fonts/font = ExtResource("3_bu1yb")
+theme_override_font_sizes/font_size = 37
+text = "Continue"
+horizontal_alignment = 1

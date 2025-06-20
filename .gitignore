@@ -1,0 +1,37 @@
+
+
+/not-using
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+
+# Godot-specific folders
+.import/
+.export/
+*.import
+
+# Godot editor settings (safe to ignore)
+.editor/
+*.godot/settings-*
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Godot build exports
+/exported_game/
+build/
+
+# Logs or debug files (if any)
+*.log
+
+# Optional: VSCode or JetBrains project files
+.vscode/
+.idea/
+
+# Optional: Python cache (if using any python scripts/tools)
+__pycache__/
+*.pyc
+

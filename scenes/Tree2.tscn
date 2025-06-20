@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bt5rvq001r41m"]
+
+[ext_resource type="Texture2D" uid="uid://bl3g5tch5k2hd" path="res://assets/enviorment-tiles/Texture/Extra/TX Plant with Shadow.png" id="1_40ygu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ctgnk"]
+radius = 3.16228
+
+[node name="Tree2" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_40ygu")
+offset = Vector2(0, -42)
+region_enabled = true
+region_rect = Rect2(292, 25.4661, 88.7289, 130.729)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 13)
+shape = SubResource("CircleShape2D_ctgnk")
