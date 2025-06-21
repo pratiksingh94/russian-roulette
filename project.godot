@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-DialougeManager="*res://scenes/singletons/DialougeManager.gd"
+DialogManager="*res://scenes/singletons/DialogManager.gd"
 
 [editor_plugins]
 

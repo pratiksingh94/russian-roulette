@@ -9,5 +9,5 @@ const line: Array[String] = [
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "CharacterBody2D":
-		DialougeManager.start_dialog(global_position, line)
+		DialogManager.start_dialog(global_position, line)
 	

@@ -1,7 +1,7 @@
 extends Node
 
 
-@onready var dialog_box_scene = preload("res://scenes/dialouge_box/dialouge.tscn")
+@onready var dialog_box_scene = preload("res://scenes/dialog_box/dialog.tscn")
 
 var dialog_lines: Array[String] = []
 var current_line = 0
