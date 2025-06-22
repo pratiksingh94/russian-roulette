@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://lniixacwwfgg"]
+[gd_scene load_steps=6 format=3 uid="uid://lniixacwwfgg"]
 
 [ext_resource type="Texture2D" uid="uid://dc5svrkgsn3w1" path="res://assets/house.png" id="1_d7po0"]
 [ext_resource type="Script" uid="uid://q74skt0qhh6s" path="res://scenes/environment/house.gd" id="1_rqqr8"]
+[ext_resource type="PackedScene" uid="uid://v63uoacoop6i" path="res://scenes/room/room.tscn" id="3_e5the"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qtlar"]
 size = Vector2(159, 157)
@@ -10,13 +11,13 @@ size = Vector2(159, 157)
 radius = 45.2769
 
 [node name="House" type="StaticBody2D"]
-script = ExtResource("1_rqqr8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1.5, -14.5)
 shape = SubResource("RectangleShape2D_qtlar")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(-7.62939e-06, 0)
 scale = Vector2(0.615517, 0.581034)
 texture = ExtResource("1_d7po0")
@@ -24,9 +25,12 @@ offset = Vector2(0, -40)
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(0, 59)
+script = ExtResource("1_rqqr8")
+room_scene = ExtResource("3_e5the")
+entry_point = Vector2(575, 351)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, -2)
 shape = SubResource("CircleShape2D_e5the")
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_area_2d_body_entered"]

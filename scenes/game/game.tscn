@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dkw724hsx3il0"]
 
 [ext_resource type="PackedScene" uid="uid://dv0c8qetmrmln" path="res://scenes/environment/Ground.tscn" id="1_lfrn8"]
-[ext_resource type="PackedScene" uid="uid://c8cg2smaxpcfm" path="res://scenes/player/Character.tscn" id="2_5i0tg"]
+[ext_resource type="PackedScene" uid="uid://c8cg2smaxpcfm" path="res://scenes/characters/player.tscn" id="2_5i0tg"]
 [ext_resource type="PackedScene" uid="uid://cv2u4t5chq268" path="res://scenes/environment/Tree1.tscn" id="3_bdhmt"]
 [ext_resource type="PackedScene" uid="uid://bt5rvq001r41m" path="res://scenes/environment/Tree2.tscn" id="4_87uf6"]
 [ext_resource type="PackedScene" uid="uid://lniixacwwfgg" path="res://scenes/environment/house.tscn" id="5_2a8rs"]

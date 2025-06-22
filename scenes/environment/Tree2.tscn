@@ -8,6 +8,7 @@ radius = 3.16228
 [node name="Tree2" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
 texture = ExtResource("1_40ygu")
 offset = Vector2(0, -42)
 region_enabled = true
