@@ -2,17 +2,18 @@
 
 [ext_resource type="Texture2D" uid="uid://dwhsjik7a68pa" path="res://assets/charachters/004.png" id="1_ohh8h"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_hwqyh"]
-radius = 6.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ohh8h"]
+radius = 15.0
+height = 50.0
 
 [node name="old_dude" type="StaticBody2D"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(4, 19)
-shape = SubResource("CircleShape2D_hwqyh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(5.74999, 15.25)
 scale = Vector2(1.76667, 1.72581)
 texture = ExtResource("1_ohh8h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(5, 16)
+shape = SubResource("CapsuleShape2D_ohh8h")

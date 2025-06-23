@@ -3,6 +3,7 @@ extends Node2D
 
 #@onready var camera_2d: Camera2D = $Camera2D
 
+#const lines: Array[String] = ["Press SPACE to exit house"]
 
 const PLAYER_SCENE = preload("res://scenes/characters/player.tscn")
 

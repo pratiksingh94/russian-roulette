@@ -60,3 +60,6 @@ position = Vector2(1094, 493)
 
 [node name="House" parent="." instance=ExtResource("5_2a8rs")]
 position = Vector2(562, 168)
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(560, 296)
